@@ -1,20 +1,20 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "lunitx"
-version = "0.7-1"
+version = "0.8-0"
 -- LuaDist source
 source = {
-  tag = "0.7-1",
+  tag = "0.8-0",
   url = "git://github.com/LuaDist-testing/lunitx.git"
 }
 -- Original source
 -- source = {
---    url = "git://github.com/dcurrie/lunit.git",
---    tag = "0.7.0"
+--   url = "git://github.com/dcurrie/lunit.git",
+--   tag = "0.8.0"
 -- }
 description = {
-   summary = "Lunitx is a unit testing framework for lua, written in lua.",
-   detailed = [[
+  summary = "Lunitx is a unit testing framework for lua, written in lua.",
+  detailed = [[
     Lunitx is a unit testing framework for lua, written in lua,
     based heavily on Lunit 0.5, but modified to work with Lua 5.2.
     Lunitx provides 27 assert functions, and a few misc functions
@@ -22,23 +22,23 @@ description = {
     Lunit comes with a test suite to test itself. The testsuite
     consists of approximately 710 assertions.
   ]],
-   homepage = "https://github.com/dcurrie/lunit",
-   license = "MIT/X11"
+  homepage = "https://github.com/dcurrie/lunit",
+  license = "MIT/X11"
 }
 dependencies = {
-   "lua >= 5.1, <= 5.2"
+  "lua >= 5.1, < 5.4"
 }
 build = {
-   type = "builtin",
-   modules = {
-      lunit = "lua/lunit.lua",
-      ['lunit.console'] = "lua/lunit/console.lua",
-      lunitx = "lua/lunitx.lua",
-      ['lunitx.atexit'] = "lua/lunitx/atexit.lua"
-   },
-   install = {
-      bin = {
-         ['lunit.sh'] = "extra/lunit.sh"
-      }
-   }
+  type = "builtin",
+  modules = {
+    ["lunit"] = "lua/lunit.lua",
+    ["lunitx"] = "lua/lunitx.lua",
+    ["lunit.console"] = "lua/lunit/console.lua",
+    ["lunitx.atexit"] = "lua/lunitx/atexit.lua",
+  },
+  install = {
+    bin = {
+      ["lunit.sh"] = "extra/lunit.sh",
+    }
+  }
 }
