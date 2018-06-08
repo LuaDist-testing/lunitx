@@ -1,17 +1,9 @@
--- This file was automatically generated for the LuaDist project.
-
 package = "lunitx"
-version = "0.6-1"
--- LuaDist source
+version = "0.7-0"
 source = {
-  tag = "0.6-1",
-  url = "git://github.com/LuaDist-testing/lunitx.git"
+  url = "git://github.com/dcurrie/lunit.git",
+  tag = "0.7.0"
 }
--- Original source
--- source = {
---   url = "git://github.com/dcurrie/lunit.git",
---   tag = "0.6.0"
--- }
 description = {
   summary = "Lunitx is a unit testing framework for lua, written in lua.",
   detailed = [[
